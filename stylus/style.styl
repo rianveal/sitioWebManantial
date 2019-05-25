@@ -1,0 +1,429 @@
+
+/*
+display -webkit-flex
+display -moz-flex
+display -ms-flex
+display -o-flex
+display flex
+*/
+
+
+body
+  margin 0
+  padding 0
+  font-family 'Roboto', sans-serif
+
+
+.header-contenedor
+  width 100%
+  height 70px
+  position absolute
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  z-index 10
+  transition all 1.1s ease-in-out
+  margin-top 0
+  .header-logo
+    width 50%
+    text-align center
+    img 
+      width 130px
+      height 43px
+      margin-top 12.5px
+  .header-menu-burger
+    width 60%
+
+.icon-menu--content
+  width 25px
+  height 18px
+  cursor pointer
+  outline none 
+  margin 26px 40px 0 auto
+  display block
+
+.icon-menu
+  display inline-block
+  margin-top 0
+  outline none
+  small
+    display block
+    border-radius 3em
+    width 25px
+    height 4px
+    margin 0 0 3px 0
+    background-color #ffffff
+    transition all 0.3s ease-in-out
+    &:nth-child(1), &:nth-child(3)
+      width 15px
+      margin-left 5px
+    &:nth-child(3)
+      margin-bottom 0
+  &:hover
+    outline none 
+
+.icon-menu--active
+  small
+    &:nth-child(1), &:nth-child(3)
+      transform rotate(45deg) translateY(5.7px)
+      width 25px
+      height 5px
+      background-color color_official_red
+    &:nth-child(2)
+      width 0
+      height 0
+    &:nth-child(3)
+      transform rotate(-45deg) translateY(-5.7px)
+
+.overlay-menu
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  background-color rgba(243,226,118,90)
+  z-index 7
+  display none
+
+.menu-options
+  position absolute
+  width 100%
+  height auto
+  top 50%
+  margin-top -35.5%
+  margin-left 0.1px  
+  ul
+    padding 0
+    margin 0
+    text-align center
+    li
+      list-style none
+      height 45px
+      line-height 45px
+      transition all 0.8s ease-in-out
+      a
+        display block
+        width 100%
+        height 100%
+        text-decoration none
+        color #263238
+        font-size 25px
+        font-weight 500
+        cursor pointer
+        font-family 'Anton', sans-serif
+        &:hover
+          transform scale(1.1)
+          color #ff6d00
+
+.contenedor-principal
+  width 100%
+  height 85vh
+  background-image url('../img/imagen-principal.jpg')
+  background-size cover
+  background-position center
+  position relative
+  &--efecto
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-image: radial-gradient(50% 99%, rgba(255,255,255,0.10) 53%, rgba(0,0,0,0.50) 100%)
+  &--mensaje
+    position absolute
+    /*
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    */
+    bottom 0%
+    left 10%
+    width 80%
+    height 300px
+    h1
+      font-family 'Anton', sans-serif
+      text-transform uppercase
+      color #f7cc47
+      text-shadow 2px 2px rgba(0,0,0,0.57)
+    p
+      color #ffffff
+      text-shadow 1px 1px rgba(0,0,0,0.57)
+    .boton-leer
+      width 120px
+      height 40px
+      text-align center
+      text-transform uppercase
+      font-weight 700
+      line-height 40px
+      border-radius 30px
+      background-color #E15151   
+      color #ffffff
+      cursor pointer
+
+.modal-contenedor
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  z-index 20
+  text-align center
+  line-height 600px
+  font-size 18px
+  text-transform uppercase
+
+.modal-principal
+  background-color rgba(38,50,56,0.7)
+
+.nosotros
+  width 100%
+  height auto
+  background-color #F3E276
+  padding 40px 0
+  &-mensaje
+    width 85%
+    margin 0 auto
+    h2
+      margin 0
+      color #F19307
+    p
+      color #794B08
+      line-height 25px
+  &-imagen
+    display none
+    background-image url('../img/quienes-somos.jpg')
+    background-size cover
+    background-position center
+
+.efecto-titulo
+  position relative
+  z-index 2
+  font-family 'Anton', sans-serif
+  span
+    position absolute
+    left 30px
+    font-size 45px 
+    top -22px
+    z-index -1
+    font-weight bold
+
+.t1
+  color rgba(246,180,81,0.3)
+
+.t2
+  color rgba(1,187,235,0.12)
+
+.t3
+  color rgba(48,45,43,0.12)
+
+.t4
+  color rgba(60,162,161,0.2)
+
+.proyeccion
+  width 100%
+  height auto
+  padding 60px 0
+  background-color #f5f5f5  
+  &-mision, &-vision
+    width 85%
+    height auto
+    margin 0 auto
+    &--imagen
+      width 220px
+      height 220px
+      margin 0 auto
+      background-size cover
+      background-position center
+   
+
+.proyeccion-mision
+  &--imagen
+    background-image url('../img/mision.png')
+  &--contenido
+    margin-top 60px
+    h2
+      color #01BBEB
+    p
+      line-height 22px
+      color #7C7C7C
+
+.proyeccion-vision
+  margin-top 80px
+  &--imagen
+    background-image url('../img/vision.png')
+  &--contenido
+    margin-top 60px
+    h2
+      color #01BBEB
+    p
+      line-height 22px  
+      color #7C7C7C  
+
+.historia
+  width 100%
+  height auto
+  background-image linear-gradient(-180deg, #F8E776 0%, #09EAE6 99%)
+  position relative
+  padding 30px 0
+  &-imagen
+    position absolute
+    top -30px
+    left 50%
+    transform translate(-50%, 0)
+    width 220px
+    height 220px
+    background-image url('../img/historia.jpg')
+    background-size cover
+    background-position center
+    border-radius 3px
+    box-shadow 0 10px 10px 0 rgba(0,0,0,0.35)
+  &-contenido
+    padding-top 160px
+    width 85%
+    margin 0 auto
+    height auto  
+    h2
+      color #444444
+      margin-top 40px
+    p
+      color #444444
+      line-height 22px  
+    .boton
+      width 120px
+      height 40px
+      line-height 40px
+      text-align center
+      border-radius 32px
+      background-color #BE912A 
+      color #ffffff
+      text-transform uppercase
+      font-size 14px
+
+.filosofia
+  width 100%
+  height 600px
+  background-image linear-gradient(-180deg, #09EAE6 0%, #F8E776 100%)
+  padding 30px 0 
+  &-imagen
+    width 220px
+    height 220px
+    margin 0 auto
+    background-image url('../img/filosofia.jpg')
+    background-size cover
+    background-position center
+    border-radius 3px
+    box-shadow 0 10px 10px 0 rgba(0,0,0,0.35)
+  &-contenido
+    width 85%
+    margin 0 auto
+    height auto  
+    h2
+      color #444444
+      margin-top 40px
+    p
+      color #444444
+      line-height 22px  
+
+.valores
+  width 100%
+  height auto
+  padding 30px 0
+  &-contenido
+    width 85%
+    height auto
+    margin 0 auto  
+    h2
+      color #3ca2a1  
+
+.valores-slide--caja
+  text-align center
+  margin-top 40px
+  .image
+    width 220px
+    height 220px
+    border-radius 50%
+    margin 0 auto
+    background-size cover
+    background-position center
+    box-shadow 0 0 40px 5px #F3E276
+  h3
+    font-size 30px  
+    font-family 'Baloo Bhai', sans-serif
+
+.amor
+  background-image url('../img/amor.jpg')
+
+.excelencia
+  background-image url('../img/excelencia.jpg')
+
+.integridad
+  background-image url('../img/integridad.jpg')  
+
+.respeto
+  background-image url('../img/respeto.jpg')    
+
+.unidad
+  background-image url('../img/unidad.jpg')   
+
+.responsabilidad
+  background-image url('../img/responsabilidad.jpg')   
+
+.mayordomia
+  background-image url('../img/mayordomia.jpg')   
+
+.botonSubir
+  position fixed
+  right 5%
+  bottom -20%
+  width 50px
+  height 50px
+  line-height 62px
+  text-align center
+  background-color #ff6f00
+  border-radius 50%
+  box-shadow 0 0 10px 5px rgba(0,0,0,0.12)
+  overflow hidden
+  transition all 0.3s ease-in-out
+  a
+    color #ffffff
+    width 100%
+    height 100%
+    display block
+    cursor pointer
+
+footer 
+  background-color #F3E276
+  padding 30px 0
+  .footer-contenido
+    width 85%
+    margin 0 auto
+    ul
+      margin 0
+      padding 0
+      text-align center
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      justify-content center
+      flex-wrap wrap
+      li
+        list-style none
+        padding 5px 0
+        width 45% 
+        margin 1%
+        a
+          text-decoration none
+          color #212121
+  .footer-derechos
+    width 85%
+    margin 20px auto 0 auto
+    text-align center
+    span
+      color #263238
+      font-size 14px
+
+
