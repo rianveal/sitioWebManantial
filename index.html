@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Asociación Manantial de Vida</title>
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -45,25 +45,33 @@
     <div class="contenedor-principal--mensaje">
       <h1>Centro de desarrollo integral</h1>
       <p>El amor al prójimo como vivencia real de nuestro Dios.</p>
-      <div class="boton-leer">
+      <div class="boton-leer botonContenedorPrincipal">
         leer más
-      </div>
-      <div style="display: none;">
-        <h4>Objetivos</h4>
-        - Formar niños, niñas y jóvenes con capacidad de desarrollo profesional.
-        - Fortalecer el desarrollo integral de cada beneficiario.
-        - Brindar herramientas necesarias para que el beneficiario sea auto sostenible.
-        - Fortalecer a cada beneficiario su desarrollo fisico en todas las áreas de la salud.
-        - Formar en los beneficiarios personas capaces de mantener relaciones socialmente
-          saludables y sanas.
-        - Desarrollar en cada beneficiario principios y valores cristianos.
-        - Defender y proteger a nuestros beneficiarios para que sus derechos fundamentales no
-          sean vulnerados.  
       </div>
     </div>
   </div>
   <div class="modal-contenedor modal-principal">
-    <p style="color: #ffffff;">Modal del botón leer mas contenedor principal</p>
+    <div class="boton-cerrar">
+      <i class="material-icons">close</i>
+    </div>
+    <div class="modal-contenedor--informacion">
+      <div class="titulo">
+        <h4>Objetivos</h4>
+      </div>
+      <div class="contenido">
+        <ul>
+          <li>Formar niños, niñas y jóvenes con capacidad de desarrollo profesional.</li>
+          <li>Fortalecer el desarrollo integral de cada beneficiario.</li>
+          <li>Brindar herramientas necesarias para que el beneficiario sea auto sostenible.</li>
+          <li>Fortalecer a cada beneficiario su desarrollo fisico en todas las áreas de la salud.</li>
+          <li>Formar en los beneficiarios personas capaces de mantener relaciones socialmente
+              saludables y sanas.</li>
+          <li>Desarrollar en cada beneficiario principios y valores cristianos.</li>
+          <li>Defender y proteger a nuestros beneficiarios para que sus derechos fundamentales no
+              sean vulnerados. </li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div class="nosotros" id="nosotros">
     <div class="nosotros-mensaje">
@@ -133,24 +141,42 @@
         Brindándoles apoyo médico, psicológico, 
         alimenticio, socio afectivo y respaldo 
         espiritual.</p>
-        <div class="boton">leer más</div> 
-        <p style="display: none;">
-          --> Botón leer más
-          En el año 2007 se realiza alianza con la organización COMPASSION internacional,
-          en el programa de petrocinio uno a uno.
-          Patrocinar es mas que una simple donación, es un sentimiento de apoyo, respaldo,
-          y compañía para un niño, un vínculo estrecho entre el niño y su patrocinador, es
-          una accion enfocada a mejorar la calidad de vida de ese ser que necesita apoyo en
-          su crecimiento y desarrollo. 
-          El patrocinio brinda diversas oportunidades y servicio, por ejemplo:
-          * Educación cristiana.
-          * Refuerzo académico.
-          * Posibilidades de aprendizajes de una habilidad generadores de ingresos.
-          * Asistencia psicológica.
-          * Desarrollo socio-emocional.
-          * Atención en salud integral.
-        </p>
+        <div class="boton boton-historia">leer más</div>
     </div>
+  </div>
+  <div class="modal-contenedor modal-historia">
+    <div class="boton-cerrar"><i class="material-icons">close</i></div>
+    <div class="modal-contenedor--informacion">
+        <div class="titulo">
+          <h4>Nuestra historia</h4>
+        </div>
+        <div class="contenido">
+          <p>La Asociación Manantiales de vida nace por iniciativa de la Iglesia Evangélica 
+              Manantial de Vida en el año 2006 con el fin de apoyar a los niños que vivían en sus 
+              zonas aledañas, representadas en (12) barrios de esta zona, representada en 
+              mas de 420 familias a través de la modalidad de CENTRO DE DESARROLLO INTEGRAL. 
+              Brindándoles apoyo médico, psicológico, alimenticio, socio afectivo y respaldo 
+              espiritual.
+          </p>
+          <p>En el año 2007 se realiza alianza con la organización COMPASSION internacional,
+            en el programa de petrocinio uno a uno.
+          </p>
+          <p>Patrocinar es mas que una simple donación, es un sentimiento de apoyo, respaldo,
+              y compañía para un niño, un vínculo estrecho entre el niño y su patrocinador, es
+              una accion enfocada a mejorar la calidad de vida de ese ser que necesita apoyo en
+              su crecimiento y desarrollo. 
+          </p>  
+          <p>El patrocinio brinda diversas oportunidades y servicio, por ejemplo:</p> 
+          <ul>
+            <li>Educación cristiana.</li>
+            <li>Refuerzo académico.</li>
+            <li>Posibilidades de aprendizajes de una habilidad generadores de ingresos.</li>
+            <li>Asistencia psicológica.</li>
+            <li>Desarrollo socio-emocional.</li>
+            <li>Atención en salud integral.</li>
+          </ul>   
+        </div>
+    </div>      
   </div>
   <div class="filosofia" id="filosofia">
     <div class="filosofia-imagen"></div>
@@ -214,12 +240,12 @@
   <footer>
     <div class="footer-contenido">
       <ul>
-        <li><a href="">¿Quienes somos?</a></li>
-        <li><a href="">Misión</a></li>
-        <li><a href="">Visión</a></li>
-        <li><a href="">Historia</a></li>
-        <li><a href="">Filosofía</a></li>
-        <li><a href="">Valores</a></li>
+        <li><a href="#nosotros">¿Quienes somos?</a></li>
+        <li><a href="#mision">Misión</a></li>
+        <li><a href="#vision">Visión</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#filosofia">Filosofía</a></li>
+        <li><a href="#valores">Valores</a></li>
       </ul>
     </div>
     <div class="footer-derechos">

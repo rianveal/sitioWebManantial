@@ -41,13 +41,46 @@ $(document).ready( function() {
   $('.valores-slide').slick({
     dots: false,
     infinite: true,
-    speed: 700,
-    fade: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     autoplay: true,
-    autoplaySpeed: 2000,
     arrows: 'false',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ] 
   });
 
   // Efecto scroll en el body
@@ -69,10 +102,32 @@ $(document).ready( function() {
       }
     }else{
       if( $(this).scrollTop() > 100 ){ 
+        $('.botonSubir').css('bottom','5%');
       }else{
-
+        $('.botonSubir').css('bottom','-20%');
       }  
     }  
   });
+
+  $('.botonContenedorPrincipal').on('click', function(){
+    if( $('.modal-principal').is(':hidden') ){
+      $('.modal-principal').fadeIn() 
+      $('body').css('overflow-y','hidden')
+    }
+  })
+
+  $('.modal-contenedor .boton-cerrar').on('click', function(){
+    $(this).parent().fadeOut()
+    $('body').css('overflow-y','visible')
+  })
+
+  $('.boton-historia').on('click', function(){
+    if( $('.modal-historia').is(':hidden') ){
+      console.log('click')
+      $('.modal-historia').fadeIn() 
+      $('body').css('overflow-y','hidden')
+    }
+  })
+
 
 });  

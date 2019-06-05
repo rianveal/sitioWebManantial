@@ -13,7 +13,6 @@ body
   padding 0
   font-family 'Roboto', sans-serif
 
-
 .header-contenedor
   width 100%
   height 70px
@@ -92,8 +91,8 @@ body
   width 100%
   height auto
   top 50%
-  margin-top -35.5%
-  margin-left 0.1px  
+  left 50%
+  transform translate(-50%, -50%)
   ul
     padding 0
     margin 0
@@ -102,7 +101,6 @@ body
       list-style none
       height 45px
       line-height 45px
-      transition all 0.8s ease-in-out
       a
         display block
         width 100%
@@ -112,17 +110,20 @@ body
         font-size 25px
         font-weight 500
         cursor pointer
-        font-family 'Anton', sans-serif
+        font-family 'Oswald', sans-serif
+        transition all 0.8s ease-in-out
         &:hover
-          transform scale(1.1)
-          color #ff6d00
+          transform scale(1.2)
+          color #e65100
+          text-shadow 1px 1px 2px #ffffff
 
 .contenedor-principal
   width 100%
-  height 85vh
+  height 95vh
   background-image url('../img/imagen-principal.jpg')
   background-size cover
   background-position center
+  background-attachment fixed
   position relative
   &--efecto
     position absolute
@@ -133,12 +134,7 @@ body
     background-image: radial-gradient(50% 99%, rgba(255,255,255,0.10) 53%, rgba(0,0,0,0.50) 100%)
   &--mensaje
     position absolute
-    /*
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-    */
-    bottom 0%
+    top 40%
     left 10%
     width 80%
     height 300px
@@ -154,11 +150,10 @@ body
       width 120px
       height 40px
       text-align center
-      text-transform uppercase
       font-weight 700
       line-height 40px
-      border-radius 30px
-      background-color #E15151   
+      border-radius 3px
+      background-color #ff9100   
       color #ffffff
       cursor pointer
 
@@ -169,13 +164,42 @@ body
   width 100%
   height 100vh
   z-index 20
-  text-align center
-  line-height 600px
-  font-size 18px
-  text-transform uppercase
+  overflow-y auto
+  .boton-cerrar
+    position absolute
+    top 20px
+    right 30px
+    width 40px
+    height 40px
+    line-height 52px
+    text-align center
+    border-radius 50%
+    cursor pointer
+    background-color #ffc400
+    color #ffffff
 
-.modal-principal
-  background-color rgba(38,50,56,0.7)
+.modal-contenedor--informacion
+  width 85%
+  height calc(100vh - 85px)
+  margin 75px auto 0 auto
+  .titulo
+    color #ffffff
+    h4
+      font-size 22px
+  .contenido
+    color #eceff1
+    p
+      line-height 22px
+      font-size 18px
+    ul
+      li
+        font-size 18px
+        line-height 22px
+        margin-bottom 10px
+
+.modal-principal, .modal-historia
+  display none
+  background-color rgba(38,50,56,0.95)
 
 .nosotros
   width 100%
@@ -193,9 +217,7 @@ body
       line-height 25px
   &-imagen
     display none
-    background-image url('../img/quienes-somos.jpg')
-    background-size cover
-    background-position center
+    background-image url('../img/quienes-somos.png')
 
 .efecto-titulo
   position relative
@@ -296,10 +318,11 @@ body
       line-height 40px
       text-align center
       border-radius 32px
-      background-color #BE912A 
+      background-color #ff8f00 
       color #ffffff
-      text-transform uppercase
       font-size 14px
+      cursor pointer
+      outline none
 
 .filosofia
   width 100%
@@ -332,6 +355,7 @@ body
   padding 30px 0
   &-contenido
     width 85%
+    max-width 1250px
     height auto
     margin 0 auto  
     h2
@@ -373,26 +397,6 @@ body
 .mayordomia
   background-image url('../img/mayordomia.jpg')   
 
-.botonSubir
-  position fixed
-  right 5%
-  bottom -20%
-  width 50px
-  height 50px
-  line-height 62px
-  text-align center
-  background-color #ff6f00
-  border-radius 50%
-  box-shadow 0 0 10px 5px rgba(0,0,0,0.12)
-  overflow hidden
-  transition all 0.3s ease-in-out
-  a
-    color #ffffff
-    width 100%
-    height 100%
-    display block
-    cursor pointer
-
 footer 
   background-color #F3E276
   padding 30px 0
@@ -418,6 +422,10 @@ footer
         a
           text-decoration none
           color #212121
+          transition all .3s ease-in-out
+          font-family 'Oswald', sans-serif
+          &:hover
+            color #e65100
   .footer-derechos
     width 85%
     margin 20px auto 0 auto
@@ -426,4 +434,362 @@ footer
       color #263238
       font-size 14px
 
+.botonSubir
+  position fixed
+  right 5%
+  bottom -20%
+  width 50px
+  height 50px
+  line-height 62px
+  text-align center
+  background-color #ff6f00
+  border-radius 50%
+  box-shadow 0 0 10px 5px rgba(0,0,0,0.12)
+  overflow hidden
+  transition all 0.3s ease-in-out
+  outline none
+  a
+    color #ffffff
+    width 100%
+    height 100%
+    display block
+    cursor pointer      
+
+@media(orientation:landscape)
+  .header-contenedor
+    .header-logo
+      width 40%
+    .header-menu-burger
+      width 55%
+
+  .menu-options
+    width 90%
+    margin 0 auto
+    ul
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      flex-wrap wrap
+      justify-content center
+      li
+        width 40%
+
+@media (min-width 768px)
+  .header-contenedor
+    height 100px
+    .header-logo
+      width 30%
+      img 
+        width 175px
+        height 73px
+        margin-top 13.5px
+    .header-menu-burger
+      width 70%
+
+  .icon-menu
+    margin-top 14px 
+
+  .contenedor-principal
+    &--mensaje
+      height auto
+      h1
+        font-size 42px
+        margin-bottom 0px
+      p
+        margin 0 0 15px 0
+        font-size 22px
+      .boton-leer
+        font-size 18px  
+
+  .menu-options
+    ul
+      li
+        height 55px
+        line-height 55px
+        a
+          font-size 32px
+          font-weight 500
+
+  .modal-contenedor
+    .boton-cerrar
+      width 50px
+      height 50px
+      line-height 62px
+
+  .modal-contenedor--informacion
+    height calc(100vh - 105px)
+    margin 105px auto 0 auto
+    .titulo
+      h4
+        font-size 30px
+    .contenido
+      p
+        line-height 25px
+        font-size 18px
+      ul
+        li
+          font-size 18px
+          line-height 22px
+          margin-bottom 10px
+  
+  .modal-historia
+    .modal-contenedor--informacion
+      margin 105px auto
+
+  .efecto-titulo
+    font-size 35px
+    span
+      font-size 60px 
+
+  .nosotros
+    &-mensaje
+      p
+        font-size 18px  
+        line-height 24px 
+
+  .proyeccion-mision, .proyeccion-vision, 
+    &--contenido
+      p
+        font-size 18px
+        line-height 24px
+
+  .historia, .filosofia
+    &-contenido
+      p
+        font-size 18px
+        line-height 24px
+      .boton
+        font-size 18px      
+
+  footer 
+    .footer-contenido
+      ul
+        li
+          width 30% 
+          a
+            font-size 18px
+    .footer-derechos
+      span
+        font-size 15px
+
+  .botonSubir
+    width 60px
+    height 60px
+    line-height 74px
+    a
+      i 
+        font-size 30px     
+
+@media (min-width 1024px)
+  
+
+  .icon-menu--content
+    display none
+
+  .overlay-menu
+    display block
+    position absolute
+    width 50%
+    height 100px  
+    left 45%
+    background-color transparent
+    z-index 20
+
+  .menu-options
+    ul
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      justify-content space-around
+      li
+        width auto
+        height 100px
+        line-height 100px
+        a
+          font-size 18px
+          color #ffffff
+          font-weight 0
+          transition all .3s ease-in-out
+          text-shadow 1px 1px 2px #ffab00
+
+  .contenedor-principal
+    &--mensaje
+      h1
+        font-size 42px
+        margin-bottom 0px
+      p
+        margin 0 0 15px 0
+        font-size 20px
+      .boton-leer
+        font-size 16px 
+
+  .efecto-titulo
+    font-size 40px
+    span
+      font-size 65px
+
+  .nosotros
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content center
+    padding 55px 0 0 0
+    &-mensaje
+      width 42%
+      max-width 600px
+      margin 20px 0 0 0
+      h2
+        margin 0
+        color #F19307
+      p
+        font-size 14px  
+        line-height 22px 
+    &-imagen
+      display block
+      background-size contain
+      background-repeat no-repeat
+      background-position center
+      width 40%
+      max-width 400px
+      height 330px
+  
+  .proyeccion-mision, .proyeccion-vision
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    align-content center
+    width 80%
+    max-width 1050px
+    &--imagen
+      width 250px
+      height 250px
+      margin-top 40px
+      margin-left 0
+    &--contenido
+      width 60%
+      margin-top 0
+      p
+        font-size 14px  
+        line-height 22px
+
+  .proyeccion-vision
+    &--imagen
+      order 2
+      margin-top 0
+      margin-left auto
+      margin-right 0
+    &--contenido
+      order 1  
+      margin-left 5%
+
+  .historia, .filosofia
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content center
+    align-content center
+    padding 80px 0 40px 0
+    &-imagen 
+      width 250px
+      height 250px
+      position inherit
+      top 0
+      left 0
+      transform translate(0,0)
+      margin 40px 5% 0 0
+    &-contenido
+      width 50%
+      max-width 600px
+      padding-top 0
+      margin 0
+      p
+        font-size 14px
+
+  .filosofia
+    height auto
+    padding 40px 0 80px 0
+    &-imagen
+      order 2
+      margin 40px 0 0 5%
+    &-contenido
+      order 1
+        
+  footer 
+    .footer-contenido
+      width 50%
+      max-width 500px
+      ul
+        justify-content space-between
+        li
+          list-style none
+          padding 5px 0
+          width auto
+          margin 0
+          a
+            font-size 14px
+            font-weight 500
+    .footer-derechos
+      width 50%
+      span
+        font-size 12px
+
+
+@media (min-width 1200px)
+
+  .header-contenedor
+    .header-logo
+      width 40%
+      text-align justify
+      margin-left 5%
+
+  .overlay-menu
+    width 60%  
+    left 40%
+
+  .menu-options
+    width 70%
+
+  .nosotros
+    &-mensaje
+      p
+        font-size 15px
+
+  .proyeccion-mision, .proyeccion-vision
+    &--imagen
+      width 300px
+      height 300px
+    &--contenido
+      p
+        font-size 15x  
+
+  .historia, .filosofia  
+    &-imagen
+      width 300px
+      height 300px
+    &-contenido
+      p
+        font-size 15px 
+
+@media (min-width 1400px)
+
+  .menu-options
+    width 50%
+
+  .modal-historia
+    .modal-contenedor--informacion
+      margin-bottom 0
+
+/*  
+@media (min-width 1400px)  
+*/
 
