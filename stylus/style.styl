@@ -29,8 +29,8 @@ body
     width 50%
     text-align center
     img 
-      width 130px
-      height 43px
+      width 160px
+      height 4px
       margin-top 12.5px
   .header-menu-burger
     width 60%
@@ -396,6 +396,78 @@ body
 .mayordomia
   background-image url('../img/manantial-mayordomia.jpg')   
 
+.areas
+  width 100%
+  height auto
+  background-color #e3f2fd  
+  padding 50px 0
+  &-contenedor
+    width 85%
+    max-width 1250px
+    margin 0 auto
+    h2
+      color #1976d2
+
+.areas-especificas
+  margin-top 60px
+  overflow hidden
+  .area-caja 
+    outline none
+    .caja
+      width 200px
+      height auto
+      border-radius 3px
+      margin 0 auto
+      text-align center
+      padding 10px 0
+      border none
+      img 
+        margin 0 auto
+        padding 0 0 10px 0
+        width 100px
+        height 100px
+      h3
+        margin 3px 0 20px 0  
+        font-family Oswald, sans-serif
+        text-transform uppercase
+      .boton
+        width 90px
+        height 40px
+        line-height 40px
+        text-align center
+        border-radius 3px
+        background-color #1e88e5  
+        margin 0 auto
+        color #ffffff
+        transition all 0.3s ease-in-out
+        cursor pointer
+        &:hover
+          transform translateY(-5px)
+          background-color #1976d2
+          box-shadow 1px 5px 1px 0px rgba(0,0,0,0.12)
+
+.modal-cognitiva, .modal-espiritualidad,
+.modal-fisica, .modal-emocional,
+.modal-defensoria
+  display none
+  background-color rgba(0,0,0,0.59)
+
+.slide
+    width 100%
+    height auto
+    margin 150px auto 0 auto
+    &-contenedor
+      width 85%
+      height auto
+
+.slide-imagen
+  img
+    width 250px
+    height 250px
+    margin 0 auto
+
+
+
 footer 
   background-color #F3E276
   padding 30px 0
@@ -474,6 +546,9 @@ footer
       justify-content center
       li
         width 40%
+
+  .slide
+    margin 100px auto 0 auto      
 
 @media (min-width 768px)
   .header-contenedor
@@ -562,6 +637,14 @@ footer
       .boton
         font-size 18px      
 
+  .slide
+    margin 230px auto 0 auto 
+
+  .slide-imagen
+    img
+      width 400px
+      height 400px
+
   footer 
     .footer-contenido
       ul
@@ -583,7 +666,6 @@ footer
 
 @media (min-width 1024px)
   
-
   .icon-menu--content
     display none
 
@@ -722,7 +804,10 @@ footer
       margin 40px 0 0 5%
     &-contenido
       order 1
-        
+
+  .slide
+    margin 100px auto 0 auto 
+
   footer 
     .footer-contenido
       width 50%
@@ -791,7 +876,5 @@ footer
     .modal-contenedor--informacion
       margin-bottom 0
 
-/*  
-@media (min-width 1400px)  
-*/
+
 
