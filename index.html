@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="img/manantial-logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Somos organización sin ánimo de lucro, concebida como fórmula de apoyo y protección de un grupo 
+  poblacional creciente de niños y niñas, en las zonas aledañas de impacto de la IGLESIA MANANTIAL DE VIDA.">
+  <meta name="author" content="Ricardo A. Velasquez Alvis">
+  <meta name="keywords" content="iglesia,manantial,vida,niños,Dios,espiritualidad,ONG"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Asociación Manantial de Vida</title>
   <link rel="stylesheet" href="css/animate.min.css">
@@ -10,6 +15,12 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div class="carga" >
+    <div class="carga-contenedor">
+      <img src="img/manantial-logo.png" alt="Asosiación maniantales de vida">
+      <h3>Cargando sito web, espere por favor..</h3>
+    </div>
+  </div>
   <header id="cabecera">
     <div class="header-contenedor">
       <div class="header-logo" id="home">
@@ -37,6 +48,7 @@
         <li class="animated fadeInDown"><a href="#historia" class="item-menu">Historia</a></li>
         <li class="animated fadeInDown"><a href="#filosofia" class="item-menu">Filosofía</a></li>
         <li class="animated fadeInDown"><a href="#valores" class="item-menu">Valores</a></li>
+        <li class="animated fadeInDown"><a href="#areas" class="item-menu">Áreas</a></li>
       </ul>
     </nav>
   </div>
@@ -234,7 +246,7 @@
       </div>
     </div>
   </div>
-  <div class="areas">
+  <div class="areas" id="areas">
     <div class="areas-contenedor">
       <h2 class="efecto-titulo">Áreas
         <span class="t4">Áreas</span>
@@ -377,6 +389,7 @@
         <li><a href="#historia">Historia</a></li>
         <li><a href="#filosofia">Filosofía</a></li>
         <li><a href="#valores">Valores</a></li>
+        <li><a href="#areas">Áreas</a></li>
       </ul>
     </div>
     <div class="footer-derechos">
@@ -385,8 +398,9 @@
   </footer>
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.min.js"></script>
   <script>
+    
     WebFontConfig = {
       google: { families: [ 'Roboto', 'Anton','Oswald','Baloo+Bhai','Material+Icons'] } };
       (function() {
@@ -397,6 +411,7 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
+      
   </script>
 </body>
 </html>

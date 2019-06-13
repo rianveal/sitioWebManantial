@@ -1,6 +1,12 @@
+$('body').css('overflow-y','hidden');
+function load() {
+  $('.carga').fadeOut();
+  $('body').css('overflow-y','visible');
+}
+window.onload = load;
 
 $(document).ready( function() {
-
+  
   var iconMenu = $('.icon-menu--content')
   var overlay = $('.overlay-menu')
   var width = window.innerWidth
