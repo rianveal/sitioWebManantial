@@ -264,6 +264,9 @@ body
 .t4
   color rgba(60,162,161,0.2)
 
+.t5
+  color rgba(249,168,37,0.2)  
+
 .proyeccion
   width 100%
   height auto
@@ -527,6 +530,35 @@ footer
       color #263238
       font-size 14px
 
+.contacto
+  width 100%
+  height auto
+  background-color #fffde7  
+  padding 50px 0
+  &-contenedor
+    width 85%
+    max-width 1250px
+    margin 0 auto
+    h2
+      color #f9a825
+
+.contacto-donacion, .contacto-direccion
+  h3
+    font-family 'Oswald', sans-serif
+    i
+      color #f9a825
+  ul
+    li
+      margin 2.5px 0
+      span
+        font-weight bold
+        font-family 'Oswald', sans-serif
+
+.contacto-contenido
+  margin-top 30px
+  p
+    line-height 22px
+
 .botonSubir
   position fixed
   right 5%
@@ -667,6 +699,17 @@ footer
       width 400px
       height 400px
 
+  .contacto-donacion, .contacto-direccion
+    h3
+      font-size 25px
+    ul
+      li   
+        font-size 18px
+
+  .contacto-contenido
+    p
+      font-size 18px
+
   footer 
     .footer-contenido
       ul
@@ -693,9 +736,9 @@ footer
   .overlay-menu
     display block
     position absolute
-    width 50%
+    width 60%
     height 100px  
-    left 45%
+    left 37%
     background-color transparent
     z-index 20
 
@@ -828,6 +871,32 @@ footer
   .slide
     margin 100px auto 0 auto 
 
+  .contacto-contenedor
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content center
+    flex-wrap wrap
+    h2
+      width 100%
+    .contacto-donacion, .contacto-direccion
+      width 47%
+      margin 0 1%
+      h3
+        font-size 23px
+      ul
+        margin 0
+        padding 0
+        li
+          margin-left 20px
+          font-size 16px
+    .contacto-contenido
+      width 100%    
+      p
+        font-size 18px
+
   footer 
     .footer-contenido
       width 50%
@@ -857,8 +926,8 @@ footer
       margin-left 5%
 
   .overlay-menu
-    width 60%  
-    left 40%
+    width 70%  
+    left 30%
 
   .menu-options
     width 70%
