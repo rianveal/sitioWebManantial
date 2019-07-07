@@ -38,21 +38,21 @@ $(document).ready( function() {
         if( idSeccion === 's1' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#F3E276')
-          $('#seccion').load('../secciones/nosotros.html');
+          $('#seccion').load('./secciones/nosotros.html');
         }else if( idSeccion === 's2' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#f5f5f5')
-          $('#seccion').load('../secciones/mision.html');
+          $('#seccion').load('./secciones/mision.html');
         }else if( idSeccion === 's3' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#f5f5f5')
-          $('#seccion').load('../secciones/vision.html');
+          $('#seccion').load('./secciones/vision.html');
         }else if( idSeccion === 's4' ){
           $('.modal-secciones').css('background-image','linear-gradient(-180deg, #F8E776 0%, #09EAE6 99%)')
-          $('#seccion').load('../secciones/historia.html');
+          $('#seccion').load('./secciones/historia.html');
         }else if( idSeccion === 's5' ){
           $('.modal-secciones').css('background-image','linear-gradient(-180deg, #09EAE6 0%, #F8E776 100%)')
-          $('#seccion').load('../secciones/filosofia.html');
+          $('#seccion').load('./secciones/filosofia.html');
         }else if( idSeccion === 's6' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#ffffff')
@@ -60,11 +60,11 @@ $(document).ready( function() {
         }else if( idSeccion === 's7' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#e3f2fd')
-          $('#seccion').load('../secciones/areas.html');
+          $('#seccion').load('./secciones/areas.html');
         }else if( idSeccion === 's8' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#fffde7')
-          $('#seccion').load('../secciones/contacto.html');
+          $('#seccion').load('./secciones/contacto.html');
         }
     if ( $('.icon-menu--content').is('hidden')){
 
