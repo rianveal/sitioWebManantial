@@ -56,7 +56,7 @@ $(document).ready( function() {
         }else if( idSeccion === 's6' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#ffffff')
-          $('#seccion').load('.../secciones/valores.html');
+          $('#seccion').load('../secciones/valores.html');
         }else if( idSeccion === 's7' ){
           $('.modal-secciones').css('background-image','none')
           $('.modal-secciones').css('background-color','#e3f2fd')
