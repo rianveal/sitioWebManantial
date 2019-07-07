@@ -1,0 +1,43 @@
+<div class="historia" id="historia">
+  <div class="historia-imagen"></div>
+  <div class="historia-contenido">
+    <h2 class="efecto-titulo">Nuestra historia
+      <span class="t3">Nuestra historia</span>
+    </h2>
+    <p>La Asociación Manantiales de vida nace por iniciativa de la Iglesia Evangélica 
+      Manantial de Vida en el año 2006 con el fin de apoyar a los niños que vivían en sus 
+      zonas aledañas, representadas en (12) barrios de esta zona, representada en 
+      mas de 420 familias a través de la modalidad de CENTRO DE DESARROLLO INTEGRAL. 
+      Brindándoles apoyo médico, psicológico, alimenticio, socio afectivo y respaldo 
+      espiritual.</p>
+    <p class="seccionOculta">En el año 2007 se realiza alianza con la organización COMPASSION internacional,
+      en el programa de patrocinio uno a uno.</p>
+    <p class="seccionOculta">Patrocinar es mas que una simple donación, es un sentimiento de apoyo, respaldo,
+      y compañía para un niño, un vínculo estrecho entre el niño y su patrocinador, es
+      una accion enfocada a mejorar la calidad de vida de ese ser que necesita apoyo en
+      su crecimiento y desarrollo.</p> 
+    <p class="seccionOculta">El patrocinio brinda diversas oportunidades y servicio, por ejemplo:</p>   
+    <ul class="seccionOculta">
+      <li>Educación cristiana.</li>
+      <li>Refuerzo académico.</li>
+      <li>Posibilidades de aprendizajes de una habilidad generadores de ingresos.</li>
+      <li>Asistencia psicológica.</li>
+      <li>Desarrollo socio-emocional.</li>
+      <li>Atención en salud integral.</li>
+    </ul>  
+      <div class="boton boton-historia">leer más</div>
+  </div>
+</div>
+
+
+<script>
+  $('.boton-historia').on('click', function(){
+    if( $('.seccionOculta').is(':hidden') ){
+      $(this).text('Ver menos')
+      $('.seccionOculta').slideDown();
+    }else{
+      $(this).text('Leer más')
+      $('.seccionOculta').slideUp();
+    }
+  })
+</script>

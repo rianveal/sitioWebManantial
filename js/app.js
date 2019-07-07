@@ -6,7 +6,8 @@ function load() {
 window.onload = load;
 
 $(document).ready( function() {
-  
+  $('.areas .slick-prev').text('');
+  $('.areas .slick-prev').append('<i class="material-icons">add</i>');
   var iconMenu = $('.icon-menu--content')
   var overlay = $('.overlay-menu')
   var width = window.innerWidth
@@ -32,6 +33,39 @@ $(document).ready( function() {
   })
   // Evento que cierra el menu principal al seleccionar una opción
   $('.item-menu').on('click', function(){
+    $('.modal-secciones').fadeIn()
+        var idSeccion = $(this).attr('id');
+        if( idSeccion === 's1' ){
+          $('.modal-secciones').css('background-image','none')
+          $('.modal-secciones').css('background-color','#F3E276')
+          $('#seccion').load('../secciones/nosotros.html');
+        }else if( idSeccion === 's2' ){
+          $('.modal-secciones').css('background-image','none')
+          $('.modal-secciones').css('background-color','#f5f5f5')
+          $('#seccion').load('../secciones/mision.html');
+        }else if( idSeccion === 's3' ){
+          $('.modal-secciones').css('background-image','none')
+          $('.modal-secciones').css('background-color','#f5f5f5')
+          $('#seccion').load('../secciones/vision.html');
+        }else if( idSeccion === 's4' ){
+          $('.modal-secciones').css('background-image','linear-gradient(-180deg, #F8E776 0%, #09EAE6 99%)')
+          $('#seccion').load('../secciones/historia.html');
+        }else if( idSeccion === 's5' ){
+          $('.modal-secciones').css('background-image','linear-gradient(-180deg, #09EAE6 0%, #F8E776 100%)')
+          $('#seccion').load('../secciones/filosofia.html');
+        }else if( idSeccion === 's6' ){
+          $('.modal-secciones').css('background-image','none')
+          $('.modal-secciones').css('background-color','#ffffff')
+          $('#seccion').load('../secciones/valores.html');
+        }else if( idSeccion === 's7' ){
+          $('.modal-secciones').css('background-image','none')
+          $('.modal-secciones').css('background-color','#e3f2fd')
+          $('#seccion').load('../secciones/areas.html');
+        }else if( idSeccion === 's8' ){
+          $('.modal-secciones').css('background-image','none')
+          $('.modal-secciones').css('background-color','#fffde7')
+          $('#seccion').load('../secciones/contacto.html');
+        }
     if ( $('.icon-menu--content').is('hidden')){
 
     }else{
@@ -40,10 +74,11 @@ $(document).ready( function() {
         $(overlay).fadeOut();
         $('.header-contenedor').css('background-color','transparent');
         $('body').css('overflow-y','visible');
+        
       }
     }
   })
-
+/*
   $('.valores-slide').slick({
     dots: false,
     infinite: true,
@@ -137,15 +172,17 @@ $(document).ready( function() {
       },
     ] 
   });
-
+  */
   // Efecto scroll en el body
+  /*
   $(document).on('click', 'a[href^="#"]', function(event){
     event.preventDefault()
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
     }, 500)
   })
-
+  */
+ 
   // Capturando evento del scoll
   $(window).scroll(function(){
     var el = $('.botonSubir')
@@ -176,12 +213,19 @@ $(document).ready( function() {
     $('body').css('overflow-y','visible')
   })
 
+  $('.modal-secciones .boton-cerrar').on('click', function(){
+    $(this).parent().fadeOut()
+    $('body').css('overflow-y','visible')
+  })
+
+  /*
   $('.boton-historia').on('click', function(){
     if( $('.modal-historia').is(':hidden') ){
       $('.modal-historia').fadeIn() 
       $('body').css('overflow-y','hidden')
     }
   })
+  */
 
   $('.caja > .boton').on('click', function(){
     var id = $(this).attr('id');
